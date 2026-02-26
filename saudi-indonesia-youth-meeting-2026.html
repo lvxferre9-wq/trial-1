@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudi-Indonesia Youth Meeting 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+
+        :root {
+            --saudi-green: #155724;
+            --indo-red: #C8102E;
+            --gold: #D4AF37;
+            --dark-gold: #AA8C2C;
+            --bg-light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-light);
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .bg-gradient-hero {
+            background: linear-gradient(135deg, #0f3d19 0%, #0a2010 60%, #1e1e1e 100%);
+        }
+
+        .gold-text {
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .bg-gold-gradient {
+            background: linear-gradient(to right, #bf953f, #b38728);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .list-gold-check li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        .list-gold-check li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 4px;
+            font-size: 1.1rem;
+            color: var(--dark-gold);
+        }
+
+        /* Table Styles */
+        table.budget-table th {
+            background-color: #1e1e1e;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+            padding: 0.75rem 1.5rem;
+        }
+        table.budget-table td {
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 0.85rem;
+            padding: 0.75rem 1.5rem;
+        }
+        table.budget-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Responsive Table for Mobile */
+        @media (max-width: 768px) {
+            table.budget-table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            table.budget-table th,
+            table.budget-table td {
+                font-size: 0.7rem;
+                padding: 0.5rem 0.5rem;
+            }
+        }
+
+        /* Logo Animation */
+        .logo-float {
+            animation: logoFloat 3s ease-in-out infinite;
+        }
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .logo-glow {
+            filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5));
+        }
+
+        /* ===== RESPONSIVE STYLES ===== */
+        
+        /* Mobile Navigation */
+        @media (max-width: 640px) {
+            nav {
+                padding: 0.5rem 1rem !important;
+            }
+            nav img {
+                height: 2rem !important;
+                width: 2rem !important;
+            }
+            nav .gap-5 {
+                gap: 0.5rem !important;
+            }
+        }
+
+        /* Hero Section Mobile */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.75rem !important;
+                line-height: 1.2 !important;
+            }
+            header .gold-text {
+                display: block;
+                font-size: 1.5rem !important;
+            }
+            header p {
+                font-size: 1rem !important;
+            }
+            header .flex-col.md\\:flex-row {
+                flex-direction: column !important;
+                gap: 0.75rem !important;
+            }
+            header .bg-black\\/30 {
+                padding: 0.75rem 1rem !important;
+            }
+        }
+
+        /* Main Content Mobile Padding */
+        @media (max-width: 768px) {
+            main {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            section {
+                margin-bottom: 2rem !important;
+            }
+        }
+
+        /* Overview Section Mobile */
+        @media (max-width: 768px) {
+            .md\\:col-span-4 {
+                grid-column: span 1 !important;
+            }
+            .md\\:col-span-8 {
+                grid-column: span 1 !important;
+            }
+            .sticky {
+                position: relative !important;
+                top: 0 !important;
+            }
+            .rounded-\\[2\\.5rem\\] {
+                border-radius: 1.5rem !important;
+            }
+        }
+
+        /* Aims Cards Mobile */
+        @media (max-width: 768px) {
+            .md\\:grid-cols-2 {
+                grid-template-columns: 1fr !important;
+            }
+            section .p-10 {
+                padding: 1.25rem !important;
+            }
+            section .text-5xl {
+                font-size: 2rem !important;
+            }
+        }
+
+        /* Background & Objectives Mobile */
+        @media (max-width: 768px) {
+            .md\\:grid-cols-2 {
+                grid-template-columns: 1fr !important;
+            }
+            .md\\:p-20 {
+                padding: 1.5rem !important;
+            }
+            .p-12 {
+                padding: 1.5rem !important;
+            }
+            .text-4xl, .text-5xl {
+                font-size: 1.75rem !important;
+            }
+        }
+
+        /* Stakeholders Mobile */
+        @media (max-width: 768px) {
+            .md\\:grid-cols-4 {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+            .md\\:p-16 {
+                padding: 1rem !important;
+            }
+        }
+
+        /* Speakers Grid Mobile */
+        @media (max-width: 1024px) {
+            .lg\\:grid-cols-4 {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        @media (max-width: 640px) {
+            .lg\\:grid-cols-4 {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        /* Moderator Section Mobile */
+        @media (max-width: 640px) {
+            .max-w-lg {
+                max-width: 100% !important;
+            }
+            .max-w-lg .h-28, .max-w-lg .w-28 {
+                height: 5rem !important;
+                width: 5rem !important;
+            }
+            .max-w-lg .text-2xl {
+                font-size: 1.25rem !important;
+            }
+            .max-w-lg .p-8 {
+                padding: 1rem !important;
+            }
+            .max-w-lg .gap-8 {
+                gap: 1rem !important;
+            }
+        }
+
+        /* Event Schedule Mobile */
+        @media (max-width: 1024px) {
+            .lg\\:grid-cols-2 {
+                grid-template-columns: 1fr !important;
+            }
+        }
+        @media (max-width: 768px) {
+            .border-l-4 {
+                margin-left: 0 !important;
+            }
+            .pl-8 {
+                padding-left: 1.5rem !important;
+            }
+            .-left-\\[38px\\] {
+                left: -1.25rem !important;
+            }
+            .w-5 {
+                width: 0.75rem !important;
+                height: 0.75rem !important;
+            }
+        }
+
+        /* Target Audience Mobile */
+        @media (max-width: 1024px) {
+            .lg\\:w-3\\/4, .lg\\:w-1\\/4 {
+                width: 100% !important;
+            }
+        }
+        @media (max-width: 768px) {
+            .bg-gradient-to-br.from-saudiGreen {
+                padding: 1.5rem !important;
+            }
+            .md\\:grid-cols-2 {
+                grid-template-columns: 1fr !important;
+            }
+            .bg-white\\/10 {
+                padding: 1rem !important;
+            }
+        }
+
+        /* Team Section Mobile */
+        @media (max-width: 768px) {
+            .md\\:grid-cols-3 {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        /* Budget Table Mobile - Already handled above */
+
+        /* Expected Outputs Mobile */
+        @media (max-width: 768px) {
+            .md\\:grid-cols-2 {
+                grid-template-columns: 1fr !important;
+            }
+            .list-gold-check li {
+                padding-left: 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Footer Mobile */
+        @media (max-width: 640px) {
+            footer .gap-5 {
+                gap: 0.5rem !important;
+            }
+            footer img {
+                height: 1.5rem !important;
+                width: auto !important;
+            }
+            footer p {
+                font-size: 0.7rem !important;
+            }
+        }
+
+        @media print {
+            body { -webkit-print-color-adjust: exact; background-color: white; font-size: 12pt; }
+            .no-print { display: none; }
+            .page-break { page-break-before: always; }
+            .bg-gradient-hero { background: #155724 !important; color: white !important; }
+            .text-white-print { color: black !important; }
+            .shadow-xl, .shadow-lg { box-shadow: none !important; border: 1px solid #ddd; }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        saudiGreen: '#155724',
+                        indoRed: '#C8102E',
+                        gold: '#D4AF37',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased text-lg"> <!-- Base text size increased to lg -->
+
+    <!-- Navigation / Actions -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-sm z-50 py-3 px-8 flex justify-between items-center no-print border-b border-gray-100">
+        <div class="flex items-center gap-5">
+            <!-- Organizers Logos in Navbar -->
+            <img src="https://raw.githubusercontent.com/lvxferre9-wq/Saudi-Youth-meet/refs/heads/main/Logo%20PPMI.png" 
+                 alt="Logo PPMI Riyadh" 
+                 class="h-12 w-12 object-contain rounded-full shadow-md hover:shadow-lg transition-shadow bg-white p-1">
+            <img src="https://raw.githubusercontent.com/lvxferre9-wq/Saudi-Youth-meet/refs/heads/main/Logo%20Logic.png" 
+                 alt="Logo LOGIC Initiative" 
+                 class="h-12 w-12 object-contain rounded-full shadow-md hover:shadow-lg transition-shadow bg-white p-1">
+            <img src="https://raw.githubusercontent.com/lvxferre9-wq/Saudi-Youth-meet/refs/heads/main/logo%20Maha.png" 
+                 alt="Logo Mandeh Haramain" 
+                 class="h-12 w-12 object-contain rounded-full shadow-md hover:shadow-lg transition-shadow bg-white p-1">
+            <img src="https://raw.githubusercontent.com/lvxferre9-wq/Saudi-Youth-meet/refs/heads/main/Logo%20Embassy.png" 
+                 alt="Logo Indonesian Embassy" 
+                 class="h-12 w-12 object-contain rounded-full shadow-md hover:shadow-lg transition-shadow bg-white p-1">
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (Reverted to Gradient Background) -->
+    <header class="min-h-screen flex flex-col justify-center items-center text-center px-4 bg-gradient-hero text-white relative overflow-hidden">
+        
+        <!-- Decoration Line -->
+        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-saudiGreen via-gold to-indoRed z-30"></div>
+        
+        <!-- Background Map Image (Saudi Map by Gemini) -->
+        <div class="absolute inset-0 z-0 flex justify-center items-center">
+            <!-- 
+                BLENDING DENGAN BACKGROUND GRADIENT:
+                - mix-blend-soft-light: Blend halus dengan warna background hijau gelap.
+                - opacity-60: Transparansi agar tidak terlalu dominan.
+                - brightness-90: Sedikit redup agar menyatu dengan background gelap.
+            -->
+            <img src="https://github.com/lvxferre9-wq/Saudi-Youth-meet/blob/main/Saudi%20Map%20by%20Gemini.png?raw=true" 
+                 alt="Saudi Arabia Map" 
+                 class="w-full h-full object-cover object-center mix-blend-soft-light opacity-60 brightness-90">
+        </div>
+
+        <!-- Decorative Blobs (Moved behind map or adjusted) -->
+        <!-- Lower opacity for blobs so they don't wash out the map -->
+        <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-green-900 rounded-full mix-blend-screen filter blur-3xl opacity-30 z-10 pointer-events-none"></div>
+        <div class="absolute -top-20 -left-20 w-96 h-96 bg-red-900 rounded-full mix-blend-screen filter blur-3xl opacity-30 z-10 pointer-events-none"></div>
+
+        <div class="z-20 max-w-6xl animate-fade-in-up mt-16 relative px-4 md:px-0">
+            <div class="mb-6 md:mb-8 inline-block bg-white/10 backdrop-blur-sm px-4 py-2 md:px-6 rounded-full border border-white/20 shadow-lg">
+                <span class="text-xs md:text-base tracking-[0.15em] md:tracking-[0.2em] uppercase text-gray-100 font-semibold">Official Project Proposal</span>
+            </div>
+            
+            <!-- Updated Title Structure (Preserved) -->
+            <h1 class="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-6 md:mb-8 leading-tight drop-shadow-lg">
+                Beyond Borders: Saudi–Indonesia <br class="hidden sm:block"> 
+                <span class="gold-text">Youth Meeting 2026</span>
+            </h1>
+            
+            <p class="text-base sm:text-lg md:text-2xl lg:text-3xl font-light italic mb-6 md:mb-10 text-gray-100 max-w-5xl mx-auto font-serif leading-relaxed px-2 md:px-0">
+                Empowering Youth Diplomacy through Educational Service, Volunteer Activities, and Professional Management
+            </p>
+
+            <!-- Key Info Badges -->
+            <div class="flex flex-col sm:flex-row md:flex-row justify-center gap-3 sm:gap-4 md:gap-6 text-sm md:text-base font-semibold tracking-wide mb-10 md:mb-16 px-2 md:px-0">
+                <div class="bg-black/30 backdrop-blur-md px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-5 rounded-xl md:rounded-2xl border border-white/10 flex items-center gap-3 md:gap-4 text-left">
+                    <div class="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-indoRed flex items-center justify-center text-white text-lg md:text-xl flex-shrink-0">
+                        <i class="far fa-calendar-alt"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs md:text-sm text-gray-300 uppercase font-bold">Date</div>
+                        <div class="text-white text-base md:text-lg">April 11, 2026</div>
+                    </div>
+                </div>
+                <div class="bg-black/30 backdrop-blur-md px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-5 rounded-xl md:rounded-2xl border border-white/10 flex items-center gap-3 md:gap-4 text-left">
+                    <div class="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full bg-saudiGreen flex items-center justify-center text-white text-lg md:text-xl flex-shrink-0">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs md:text-sm text-gray-300 uppercase font-bold">Location</div>
+                        <div class="text-white text-base md:text-lg">Indonesian Embassy, Riyadh</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-xs md:text-sm md:text-base text-gray-300 uppercase tracking-widest font-medium">
+                Prepared By: Indonesian Students Association in Riyadh
+            </div>
+        </div>
+    </header>
+
+    <!-- OVERVIEW SECTION -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-20 lg:py-32">
+        
+        <!-- INTRO GRID -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 mb-16 md:mb-32 items-start">
+            <div class="md:col-span-4">
+                <div class="md:sticky md:top-32">
+                    <span class="text-saudiGreen font-bold tracking-widest text-sm md:text-base uppercase mb-2 md:mb-4 block">Executive Summary</span>
+                    <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-8 leading-tight">Beyond <br class="hidden md:block"> Borders</h2>
+                    <div class="w-16 md:w-24 h-2 bg-gold mb-4 md:mb-8"></div>
+                    <p class="text-gray-600 text-base md:text-xl mb-4 md:mb-8 leading-relaxed">
+                        An inaugural milestone where diplomatic friendship meets the art of collaborative impact.
+                    </p>
+                    <div class="bg-white p-4 md:p-8 rounded-xl md:rounded-2xl shadow-lg border-l-4 md:border-l-8 border-gold">
+                        <div class="text-xs md:text-sm text-gray-500 uppercase mb-1 md:mb-2 font-bold">Organizers</div>
+                        <div class="font-bold text-gray-900 text-base md:text-xl">PPMI Riyadh & LOGIC Initiative</div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:col-span-8">
+                <div class="bg-white p-6 md:p-10 lg:p-14 rounded-2xl md:rounded-[2.5rem] shadow-xl border border-gray-100 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 md:w-40 h-20 md:h-40 bg-gray-50 rounded-bl-full -mr-6 md:-mr-12 -mt-6 md:-mt-12 z-0"></div>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6 font-serif text-gray-900">Overview</h3>
+                        <p class="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed md:leading-loose mb-4 md:mb-8 text-justify">
+                            On the significant occasion of Indonesian National Education Day (Hardiknas), the Saudi–Indonesia Youth Meeting 2026 emerges as a bilateral movement designed to transform youth diplomacy into a lasting legacy of social impact by drawing on the vision of Mandeh Haramain and the strategic partnership between PPMI Riyadh and the LOGIC Initiative. Strategically aligned with <b>the Human Capability Development Program under Saudi Vision 2030</b>, this initiative serves as a catalyst in the Kingdom's ambitious journey to empower citizens and foster global citizenship through cross-cultural synergy and a redefined approach to education beyond the classroom. 
+                        </p>
+                        <p class="text-gray-700 text-base md:text-lg lg:text-xl leading-relaxed md:leading-loose mb-4 md:mb-8 text-justify">
+                            By positioning volunteering as a vital instrument for character building and soft diplomacy, the meeting provides a platform for young leaders to cultivate the wisdom and leadership necessary to contribute meaningfully to the progress of humanity, ultimately elevating youth initiatives from traditional community service into professionally managed, sustainable projects—transforming the spirit of charity into social innovation and architecting a collaborative roadmap that directly aligns the aspirations of <b>Saudi Vision 2030</b> with <b>Indonesia Golden Vision 2045</b>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AIMS CARDS -->
+        <section class="mb-16 md:mb-32 page-break">
+            <div class="text-center mb-10 md:mb-20">
+                <!-- Updated Title (Preserved) -->
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900">Our Event Aims To</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+                <!-- Aim 1 -->
+                <div class="bg-white p-6 md:p-10 rounded-2xl md:rounded-3xl shadow-lg hover:shadow-2xl card-hover border-t-4 md:border-t-8 border-saudiGreen group flex flex-col h-full">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-green-50 rounded-full flex items-center justify-center text-saudiGreen text-xl md:text-3xl mb-4 md:mb-8 group-hover:bg-saudiGreen group-hover:text-white transition-colors">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h4 class="font-bold text-lg md:text-2xl mb-2 md:mb-4 text-gray-900">Professionalize Service</h4>
+                    <p class="text-sm md:text-lg text-gray-600 leading-relaxed">To transform youthful energy into structured social impact. By transitioning from traditional charity to purposeful, managed action, we ensure that volunteer initiatives achieve the same rigor and effectiveness as professional global projects.</p>
+                </div>
+
+                <!-- Aim 2 -->
+                <div class="bg-white p-6 md:p-10 rounded-2xl md:rounded-3xl shadow-lg hover:shadow-2xl card-hover border-t-4 md:border-t-8 border-indoRed group flex flex-col h-full">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-red-50 rounded-full flex items-center justify-center text-indoRed text-xl md:text-3xl mb-4 md:mb-8 group-hover:bg-indoRed group-hover:text-white transition-colors">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h4 class="font-bold text-lg md:text-2xl mb-2 md:mb-4 text-gray-900">Cultivate 'Diplomat-Managers'</h4>
+                    <p class="text-sm md:text-lg text-gray-600 leading-relaxed">Nurturing leaders who possess the cultural empathy of a diplomat and the operational precision of a manager—individuals equipped to build international bridges while executing vision with excellence.</p>
+                </div>
+
+                <!-- Aim 3 -->
+                <div class="bg-white p-6 md:p-10 rounded-2xl md:rounded-3xl shadow-lg hover:shadow-2xl card-hover border-t-4 md:border-t-8 border-gold group flex flex-col h-full">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-yellow-50 rounded-full flex items-center justify-center text-yellow-600 text-xl md:text-3xl mb-4 md:mb-8 group-hover:bg-gold group-hover:text-white transition-colors">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h4 class="font-bold text-lg md:text-2xl mb-2 md:mb-4 text-gray-900">Education through Service</h4>
+                    <p class="text-sm md:text-lg text-gray-600 leading-relaxed">Positioning volunteering as a living laboratory for leadership development beyond the classroom. Advocating that the most profound learning occurs through action.</p>
+                </div>
+
+                <!-- Aim 4 -->
+                <div class="bg-white p-6 md:p-10 rounded-2xl md:rounded-3xl shadow-lg hover:shadow-2xl card-hover border-t-4 md:border-t-8 border-gray-800 group flex flex-col h-full">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-gray-100 rounded-full flex items-center justify-center text-gray-800 text-xl md:text-3xl mb-4 md:mb-8 group-hover:bg-gray-800 group-hover:text-white transition-colors">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4 class="font-bold text-lg md:text-2xl mb-2 md:mb-4 text-gray-900">Architect a Shared Future</h4>
+                    <p class="text-sm md:text-lg text-gray-600 leading-relaxed">Strategically aligning Saudi Vision 2030 and Indonesia Golden Vision 2045. Making Indonesian and Saudi youth active stakeholders in driving a prosperous and socially conscious future.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BACKGROUND & OBJECTIVES -->
+        <section class="relative rounded-2xl md:rounded-[3rem] overflow-hidden mb-16 md:mb-32 page-break shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-hero"></div>
+            <div class="absolute top-0 right-0 opacity-5 text-[10rem] md:text-[20rem] text-white transform rotate-12 translate-x-16 md:translate-x-32 -translate-y-16 md:-translate-y-32"><i class="fas fa-globe"></i></div>
+            
+            <div class="relative z-10 grid grid-cols-1 md:grid-cols-2">
+                <!-- Left: Background -->
+                <div class="p-6 md:p-12 lg:p-20 text-white border-b md:border-b-0 md:border-r border-white/10">
+                    <span class="text-gold font-bold tracking-widest text-xs md:text-sm uppercase mb-4 md:mb-6 block">I. Context</span>
+                    <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-8 font-serif">Background & Rationale</h2>
+                    <p class="text-gray-200 text-base md:text-xl leading-relaxed md:leading-loose mb-6 md:mb-10">
+                        The bilateral relationship has evolved into a strategic partnership. Within this landscape, youth and diaspora communities have emerged as "Diplomat-Managers"—non-state actors who combine diplomatic vision with technical management skills.
+                    </p>
+                    <div class="bg-white/10 backdrop-blur-md p-4 md:p-8 rounded-xl md:rounded-2xl border border-white/10">
+                        <h4 class="font-bold text-gold mb-4 md:mb-6 text-base md:text-xl">Strategic Pillars</h4>
+                        <ul class="space-y-2 md:space-y-4 text-sm md:text-lg text-gray-100">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-3 md:mr-4 text-base md:text-xl"></i> The Emergence of Diplomat-Managers</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-3 md:mr-4 text-base md:text-xl"></i> Educational Innovation</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-gold mr-3 md:mr-4 text-base md:text-xl"></i> National Vision Alignment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right: Objectives -->
+                <div class="p-6 md:p-12 lg:p-20 bg-black/20 text-white">
+                    <span class="text-gold font-bold tracking-widest text-xs md:text-sm uppercase mb-4 md:mb-6 block">II. Goals</span>
+                    <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-8 font-serif">Objectives</h2>
+                    
+                    <div class="mb-8 md:mb-12">
+                        <h4 class="text-lg md:text-2xl font-bold text-white mb-2 md:mb-4 border-b-2 border-gold/50 inline-block pb-2">General Objective</h4>
+                        <p class="text-gray-200 text-sm md:text-lg leading-relaxed">To establish a sustainable ecosystem of youth collaboration between Indonesia and Saudi Arabia rooted in education and professional social volunteering.</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg md:text-2xl font-bold text-white mb-4 md:mb-6 border-b-2 border-gold/50 inline-block pb-2">Specific Objectives</h4>
+                        <div class="grid gap-4 md:gap-6">
+                            <div class="flex items-start">
+                                <span class="bg-gold text-black text-xs md:text-sm font-bold px-2 md:px-3 py-1 rounded mt-1 mr-3 md:mr-4 flex-shrink-0">01</span>
+                                <p class="text-sm md:text-lg text-gray-300"><strong>Policy Insight:</strong> Obtain strategic views from government leaders and scholars.</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="bg-gold text-black text-xs md:text-sm font-bold px-2 md:px-3 py-1 rounded mt-1 mr-3 md:mr-4 flex-shrink-0">02</span>
+                                <p class="text-sm md:text-lg text-gray-300"><strong>Educational Exchange:</strong> Discuss volunteering as non-formal education.</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="bg-gold text-black text-xs md:text-sm font-bold px-2 md:px-3 py-1 rounded mt-1 mr-3 md:mr-4 flex-shrink-0">03</span>
+                                <p class="text-sm md:text-lg text-gray-300"><strong>Cross-Border Networking:</strong> Facilitate organic interaction between Indonesian and Saudi youth.</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="bg-gold text-black text-xs md:text-sm font-bold px-2 md:px-3 py-1 rounded mt-1 mr-3 md:mr-4 flex-shrink-0">04</span>
+                                <p class="text-sm md:text-lg text-gray-300"><strong>Future Framework:</strong> Initiate a foundation for future collaborative social projects.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STAKEHOLDERS -->
+        <section class="mb-16 md:mb-32">
+            <div class="bg-white rounded-2xl md:rounded-[2rem] shadow-xl p-4 md:p-10 lg:p-16 border border-gray-100">
+                <div class="text-center mb-8 md:mb-16">
+                    <h2 class="text-2xl md:text-4xl font-bold text-gray-900 font-serif">Stakeholders & Partners</h2>
+                    <div class="w-16 md:w-24 h-2 bg-saudiGreen mx-auto mt-4 md:mt-6"></div>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
+                    <!-- PPMI Riyadh Card with Logo -->
+                    <div class="p-3 md:p-6 rounded-xl md:rounded-2xl bg-gray-50 border border-gray-200 hover:shadow-lg transition-shadow">
+                        <div class="mb-2 md:mb-4 flex justify-center">
+                            <img src="https://raw.githubusercontent.com/lvxferre9-wq/Saudi-Youth-meet/refs/heads/main/Logo%20PPMI.png" 
+                                 alt="Logo PPMI Riyadh" 
+                                 class="h-12 w-12 md:h-16 md:w-16 lg:h-20 lg:w-20 object-contain rounded-full shadow-md bg-white p-1">
+                        </div>
+                        <div class="font-bold text-gray-900 text-sm md:text-lg">PPMI Riyadh</div>
+                        <div class="text-xs md:text-sm text-gray-600 uppercase mt-1 md:mt-2 font-semibold">Organizer</div>
+                    </div>
+                    <!-- LOGIC Initiative Card with Logo -->
+                    <div class="p-3 md:p-6 rounded-xl md:rounded-2xl bg-gray-50 border border-gray-200 hover:shadow-lg transition-shadow">
+                        <div class="mb-2 md:mb-4 flex justify-center">
+                            <img src="https://raw.githubusercontent.com/lvxferre9-wq/Saudi-Youth-meet/refs/heads/main/Logo%20Logic.png" 
+                                 alt="Logo LOGIC Initiative" 
+                                 class="h-12 w-12 md:h-16 md:w-16 lg:h-20 lg:w-20 object-contain rounded-full shadow-md bg-white p-1">
+                        </div>
+                        <div class="font-bold text-gray-900 text-sm md:text-lg">LOGIC Initiative</div>
+                        <div class="text-xs md:text-sm text-gray-600 uppercase mt-1 md:mt-2 font-semibold">Strategic Partner</div>
+                    </div>
+                    <!-- Mandeh Haramain Card with Logo -->
+                    <div class="p-3 md:p-6 rounded-xl md:rounded-2xl bg-gray-50 border border-gray-200 hover:shadow-lg transition-shadow">
+                        <div class="mb-2 md:mb-4 flex justify-center">
+                            <img src="https://raw.githubusercontent.com/lvxferre9-wq/Saudi-Youth-meet/refs/heads/main/logo%20Maha.png" 
+                                 alt="Logo Mandeh Haramain" 
+                                 class="h-12 w-12 md:h-16 md:w-16 lg:h-20 lg:w-20 object-contain rounded-full shadow-md bg-white p-1">
+                        </div>
+                        <div class="font-bold text-gray-900 text-sm md:text-lg">Mandeh Haramain</div>
+                        <div class="text-xs md:text-sm text-gray-600 uppercase mt-1 md:mt-2 font-semibold">Initiator</div>
+                    </div>
+                    <!-- Indonesian Embassy Card with Logo -->
+                    <div class="p-3 md:p-6 rounded-xl md:rounded-2xl bg-gray-50 border border-gray-200 hover:shadow-lg transition-shadow">
+                        <div class="mb-2 md:mb-4 flex justify-center">
+                            <img src="https://raw.githubusercontent.com/lvxferre9-wq/Saudi-Youth-meet/refs/heads/main/Logo%20Embassy.png" 
+                                 alt="Logo Indonesian Embassy" 
+                                 class="h-12 w-12 md:h-16 md:w-16 lg:h-20 lg:w-20 object-contain rounded-full shadow-md bg-white p-1">
+                        </div>
+                        <div class="font-bold text-gray-900 text-sm md:text-lg">Indonesian Embassy</div>
+                        <div class="text-xs md:text-sm text-gray-600 uppercase mt-1 md:mt-2 font-semibold">Host</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPEAKERS & MODERATOR SECTION - SESSION 1 -->
+        <section class="mb-16 md:mb-32">
+            <div class="text-center mb-8 md:mb-12">
+                <span class="text-gray-500 font-bold tracking-widest text-xs md:text-sm uppercase mb-2 md:mb-3 block">IV. Session 1</span>
+                <h2 class="text-2xl md:text-4xl font-bold text-gray-900 font-serif">Bilateral Leadership Forum</h2>
+                <p class="text-base md:text-xl italic text-gray-600 mt-2 md:mt-4 font-serif px-4"><span class="font-bold text-gray-900">The Triad of Impact:</span> Integrating Educational Values, Volunteerism, and Executive Rigor</p>
+            </div>
+
+            <!-- Speakers Grid: 4 speakers horizontal on desktop, moderator below -->
+            <!-- 4 Speakers in a row -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6 md:mb-8">
+                <!-- Speaker 1: Nasser -->
+                <div class="bg-white rounded-2xl md:rounded-3xl shadow-lg overflow-hidden border border-gray-100 group hover:shadow-xl transition-shadow">
+                    <div class="aspect-square bg-gradient-to-br from-saudiGreen/10 to-green-100 flex items-center justify-center p-4 md:p-6">
+                        <img src="https://github.com/lvxferre9-wq/Saudi-Youth-meet/blob/main/PP%20Nasser.png?raw=true" 
+                             alt="Nasser Al-Qahtani" 
+                             class="w-[200px] h-[200px] md:w-full md:h-full object-cover rounded-full border-2 md:border-4 border-black shadow-lg mx-auto">
+                    </div>
+                    <div class="p-4 md:p-6 text-center">
+                        <a href="https://www.linkedin.com/in/nasser-alqahtani-6168532a0/" target="_blank" rel="noopener noreferrer" class="font-bold text-base md:text-xl text-gray-900 hover:text-saudiGreen transition-colors group inline-flex items-center gap-2">
+                            Nasser Al-Qahtani
+                            <i class="fas fa-external-link-alt text-xs text-gray-400 group-hover:text-saudiGreen"></i>
+                        </a>
+                        <p class="text-xs md:text-sm text-gray-600 mt-1 md:mt-2">CEO, LOGIC Initiative (KSA)</p>
+                    </div>
+                </div>
+
+                <!-- Speaker 2: Anies -->
+                <div class="bg-white rounded-2xl md:rounded-3xl shadow-lg overflow-hidden border border-gray-100 group hover:shadow-xl transition-shadow">
+                    <div class="aspect-square bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center p-4 md:p-6">
+                        <img src="https://github.com/lvxferre9-wq/Saudi-Youth-meet/blob/main/PP%20Anies.png?raw=true" 
+                             alt="Anies Baswedan" 
+                             class="w-[200px] h-[200px] md:w-full md:h-full object-cover rounded-full border-2 md:border-4 border-black shadow-lg mx-auto">
+                    </div>
+                    <div class="p-4 md:p-6 text-center">
+                        <a href="https://www.linkedin.com/in/aniesrasyidbaswedan/" target="_blank" rel="noopener noreferrer" class="font-bold text-base md:text-xl text-gray-900 hover:text-saudiGreen transition-colors group inline-flex items-center gap-2">
+                            Anies Baswedan, Ph.D.
+                            <i class="fas fa-external-link-alt text-xs text-gray-400 group-hover:text-saudiGreen"></i>
+                        </a>
+                        <p class="text-xs md:text-sm text-gray-600 mt-1 md:mt-2">Governor of Jakarta (2017-2022) | Minister of Education (2014-2016)</p>
+                    </div>
+                </div>
+
+                <!-- Speaker 3: Salman -->
+                <div class="bg-white rounded-2xl md:rounded-3xl shadow-lg overflow-hidden border border-gray-100 group hover:shadow-xl transition-shadow">
+                    <div class="aspect-square bg-gradient-to-br from-gold/20 to-yellow-100 flex items-center justify-center p-4 md:p-6">
+                        <img src="https://github.com/lvxferre9-wq/Saudi-Youth-meet/blob/main/PP%20Salman.png?raw=true" 
+                             alt="Salman Subakat" 
+                             class="w-[200px] h-[200px] md:w-full md:h-full object-cover rounded-full border-2 md:border-4 border-black shadow-lg mx-auto">
+                    </div>
+                    <div class="p-4 md:p-6 text-center">
+                        <a href="https://www.linkedin.com/in/salman-subakat-92764758/" target="_blank" rel="noopener noreferrer" class="font-bold text-base md:text-xl text-gray-900 hover:text-saudiGreen transition-colors group inline-flex items-center gap-2">
+                            Salman Subakat
+                            <i class="fas fa-external-link-alt text-xs text-gray-400 group-hover:text-saudiGreen"></i>
+                        </a>
+                        <p class="text-xs md:text-sm text-gray-600 mt-1 md:mt-2">CEO of Paragon Technology and Innovation (ParagonCorp)</p>
+                    </div>
+                </div>
+
+                <!-- Speaker 4: To Be Confirmed (Previously Fayyiz) -->
+                <div class="bg-white rounded-2xl md:rounded-3xl shadow-lg overflow-hidden border border-gray-100 group hover:shadow-xl transition-shadow">
+                    <div class="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center p-4 md:p-6">
+                        <div class="w-[200px] h-[200px] md:w-full md:h-full rounded-full border-2 md:border-4 border-gray-300 shadow-lg mx-auto bg-gray-200 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-user text-4xl md:text-6xl text-gray-400"></i>
+                                <p class="text-xs md:text-sm text-gray-500 mt-2 font-medium">Speaker TBC</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 md:p-6 text-center">
+                        <p class="font-bold text-base md:text-xl text-gray-400 italic">To Be Confirmed</p>
+                        <p class="text-xs md:text-sm text-gray-400 mt-1 md:mt-2 italic">Speaker details pending</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Moderator Section Below Speakers -->
+            <div class="max-w-xl mx-auto">
+                <div class="w-full bg-gradient-to-r from-gray-100 via-white to-gray-100 rounded-2xl md:rounded-3xl p-6 md:p-10 border border-gray-200 md:border-2 shadow-lg flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-8">
+                    <img src="https://github.com/lvxferre9-wq/Saudi-Youth-meet/blob/main/PP%20Elvin.png?raw=true" 
+                         alt="Elvin Adrin" 
+                         class="h-32 w-32 md:h-36 md:w-36 object-cover rounded-full border-2 md:border-4 border-black shadow-lg flex-shrink-0">
+                    <div class="text-center sm:text-left">
+                        <span class="text-xs md:text-sm uppercase tracking-widest text-gray-500 font-bold">Moderator</span>
+                        <a href="https://www.linkedin.com/in/elvin-adrin-8918a699/" target="_blank" rel="noopener noreferrer" class="font-bold text-xl md:text-2xl text-gray-900 hover:text-gold transition-colors inline-flex items-center gap-2 group mt-1">
+                            Elvin Adrin
+                            <i class="fas fa-external-link-alt text-xs md:text-sm text-gray-400 group-hover:text-gold"></i>
+                        </a>
+                        <p class="text-sm md:text-base text-gray-600 mt-1 md:mt-2">Master's Student in Theoretical Linguistics, KSU</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPEAKERS & MODERATOR SECTION - SESSION 2 -->
+        <section class="mb-16 md:mb-32">
+            <div class="text-center mb-8 md:mb-12">
+                <span class="text-gray-500 font-bold tracking-widest text-xs md:text-sm uppercase mb-2 md:mb-3 block">IV. Session 2</span>
+                <h2 class="text-2xl md:text-4xl font-bold text-gray-900 font-serif">Executive Seminar on Cultural Diplomacy</h2>
+                <p class="text-base md:text-xl italic text-gray-600 mt-2 md:mt-4 font-serif px-4"><span class="font-bold text-gray-900">Operationalizing the 1955 Spirit:</span> Technical Strategies for Saudi-Indonesia Youth Initiatives</p>
+            </div>
+
+            <!-- Speakers Grid: 4 speakers horizontal on desktop, moderator below -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6 md:mb-8">
+                <!-- Speaker 1: TBC -->
+                <div class="bg-white rounded-2xl md:rounded-3xl shadow-lg overflow-hidden border border-gray-100 group hover:shadow-xl transition-shadow">
+                    <div class="aspect-square bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center p-4 md:p-6">
+                        <div class="w-[200px] h-[200px] md:w-full md:h-full rounded-full border-2 md:border-4 border-gray-300 shadow-lg mx-auto bg-gradient-to-br from-blue-200 to-blue-100 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-user text-4xl md:text-6xl text-blue-400"></i>
+                                <p class="text-xs md:text-sm text-blue-500 mt-2 font-medium">Speaker TBC</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 md:p-6 text-center">
+                        <p class="font-bold text-base md:text-xl text-gray-400 italic">To Be Confirmed</p>
+                        <p class="text-xs md:text-sm text-gray-400 mt-1 md:mt-2 italic">Speaker details pending</p>
+                    </div>
+                </div>
+
+                <!-- Speaker 2: TBC -->
+                <div class="bg-white rounded-2xl md:rounded-3xl shadow-lg overflow-hidden border border-gray-100 group hover:shadow-xl transition-shadow">
+                    <div class="aspect-square bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center p-4 md:p-6">
+                        <div class="w-[200px] h-[200px] md:w-full md:h-full rounded-full border-2 md:border-4 border-gray-300 shadow-lg mx-auto bg-gradient-to-br from-green-200 to-green-100 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-user text-4xl md:text-6xl text-green-400"></i>
+                                <p class="text-xs md:text-sm text-green-500 mt-2 font-medium">Speaker TBC</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 md:p-6 text-center">
+                        <p class="font-bold text-base md:text-xl text-gray-400 italic">To Be Confirmed</p>
+                        <p class="text-xs md:text-sm text-gray-400 mt-1 md:mt-2 italic">Speaker details pending</p>
+                    </div>
+                </div>
+
+                <!-- Speaker 3: TBC -->
+                <div class="bg-white rounded-2xl md:rounded-3xl shadow-lg overflow-hidden border border-gray-100 group hover:shadow-xl transition-shadow">
+                    <div class="aspect-square bg-gradient-to-br from-yellow-100 to-yellow-50 flex items-center justify-center p-4 md:p-6">
+                        <div class="w-[200px] h-[200px] md:w-full md:h-full rounded-full border-2 md:border-4 border-gray-300 shadow-lg mx-auto bg-gradient-to-br from-yellow-200 to-yellow-100 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-user text-4xl md:text-6xl text-yellow-500"></i>
+                                <p class="text-xs md:text-sm text-yellow-600 mt-2 font-medium">Speaker TBC</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 md:p-6 text-center">
+                        <p class="font-bold text-base md:text-xl text-gray-400 italic">To Be Confirmed</p>
+                        <p class="text-xs md:text-sm text-gray-400 mt-1 md:mt-2 italic">Speaker details pending</p>
+                    </div>
+                </div>
+
+                <!-- Speaker 4: TBC -->
+                <div class="bg-white rounded-2xl md:rounded-3xl shadow-lg overflow-hidden border border-gray-100 group hover:shadow-xl transition-shadow">
+                    <div class="aspect-square bg-gradient-to-br from-purple-100 to-purple-50 flex items-center justify-center p-4 md:p-6">
+                        <div class="w-[200px] h-[200px] md:w-full md:h-full rounded-full border-2 md:border-4 border-gray-300 shadow-lg mx-auto bg-gradient-to-br from-purple-200 to-purple-100 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-user text-4xl md:text-6xl text-purple-400"></i>
+                                <p class="text-xs md:text-sm text-purple-500 mt-2 font-medium">Speaker TBC</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4 md:p-6 text-center">
+                        <p class="font-bold text-base md:text-xl text-gray-400 italic">To Be Confirmed</p>
+                        <p class="text-xs md:text-sm text-gray-400 mt-1 md:mt-2 italic">Speaker details pending</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Moderator Section Below Speakers - Session 2 -->
+            <div class="max-w-xl mx-auto">
+                <div class="w-full bg-gradient-to-r from-gray-100 via-white to-gray-100 rounded-2xl md:rounded-3xl p-6 md:p-10 border border-gray-200 md:border-2 shadow-lg flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-8">
+                    <div class="h-32 w-32 md:h-36 md:w-36 rounded-full border-2 md:border-4 border-gray-300 shadow-lg flex-shrink-0 bg-gradient-to-br from-gray-200 to-gray-100 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-user text-2xl md:text-3xl text-gray-400"></i>
+                        </div>
+                    </div>
+                    <div class="text-center sm:text-left">
+                        <span class="text-xs md:text-sm uppercase tracking-widest text-gray-500 font-bold">Moderator</span>
+                        <p class="font-bold text-xl md:text-2xl text-gray-400 italic">To Be Confirmed</p>
+                        <p class="text-sm md:text-base text-gray-400 mt-1 md:mt-2 italic">Moderator details pending</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EVENT SCHEDULE SECTION -->
+        <section class="mb-16 md:mb-32">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+                <!-- Schedule -->
+                <div>
+                    <span class="text-gray-500 font-bold tracking-widest text-xs md:text-sm uppercase mb-2 md:mb-4 block">V. Rundown</span>
+                    <h2 class="text-2xl md:text-4xl font-bold text-gray-900 mb-6 md:mb-10 font-serif">Event Schedule</h2>
+                    
+                    <div class="relative pl-6 md:pl-8 border-l-4 border-gray-300 space-y-6 md:space-y-10">
+                        <!-- Item -->
+                        <div class="relative">
+                            <div class="absolute -left-[26px] md:-left-[38px] top-1 w-3 h-3 md:w-5 md:h-5 rounded-full bg-gray-400 border-2 md:border-4 border-white"></div>
+                            <span class="text-xs md:text-sm font-bold text-gray-600 uppercase">09:30 – 10:00</span>
+                            <h4 class="font-bold text-base md:text-xl text-gray-900 mt-1">Opening Ceremony</h4>
+                            <p class="text-xs md:text-sm text-gray-600 mt-1 md:mt-2 mb-1 md:mb-2 font-medium">National Anthems Indonesia & Saudi Arabia</p>
+                            <ul class="text-xs md:text-sm text-gray-600 list-disc ml-4 md:ml-5 space-y-0.5 md:space-y-1">
+                                <li>Speech: Indonesian Ambassador</li>
+                                <li>Speech: Educational Attaché</li>
+                                <li>Speech: Mandeh Haramain</li>
+                                <li>Speech: PPMI Riyadh (Head Committee)</li>
+                            </ul>
+                        </div>
+                         <!-- Item -->
+                         <div class="relative">
+                            <div class="absolute -left-[26px] md:-left-[38px] top-1 w-3 h-3 md:w-5 md:h-5 rounded-full bg-saudiGreen border-2 md:border-4 border-white"></div>
+                            <span class="text-xs md:text-sm font-bold text-saudiGreen uppercase">10:00 – 12:00</span>
+                            <h4 class="font-bold text-base md:text-xl text-gray-900 mt-1">Session 1: Bilateral Leadership Forum</h4>
+                            <p class="text-xs md:text-sm text-gray-500 mt-1 italic">The Triad of Impact: Integrating Educational Values, Volunteerism, and Executive Rigor</p>
+                        </div>
+                         <!-- Item -->
+                         <div class="relative">
+                            <div class="absolute -left-[26px] md:-left-[38px] top-1 w-3 h-3 md:w-5 md:h-5 rounded-full bg-gray-300 border-2 md:border-4 border-white"></div>
+                            <span class="text-xs md:text-sm font-bold text-gray-600 uppercase">12:00 – 12:15</span>
+                            <h4 class="font-bold text-base md:text-xl text-gray-900 mt-1">Dhuhr Prayer</h4>
+                        </div>
+                         <!-- Item -->
+                         <div class="relative">
+                            <div class="absolute -left-[26px] md:-left-[38px] top-1 w-3 h-3 md:w-5 md:h-5 rounded-full bg-orange-400 border-2 md:border-4 border-white"></div>
+                            <span class="text-xs md:text-sm font-bold text-orange-600 uppercase">12:15 – 13:15</span>
+                            <h4 class="font-bold text-base md:text-xl text-gray-900 mt-1">Indonesian Hospitality & Food Tour</h4>
+                         </div>
+                         <!-- Item -->
+                         <div class="relative">
+                            <div class="absolute -left-[26px] md:-left-[38px] top-1 w-3 h-3 md:w-5 md:h-5 rounded-full bg-indoRed border-2 md:border-4 border-white"></div>
+                            <span class="text-xs md:text-sm font-bold text-indoRed uppercase">13:15 – 15:00</span>
+                            <h4 class="font-bold text-base md:text-xl text-gray-900 mt-1">Session 2: Executive Seminar on Cultural Diplomacy</h4>
+                            <p class="text-xs md:text-sm text-gray-500 mt-1 italic">Operationalizing the 1955 Spirit: Technical Strategies for Saudi-Indonesia Youth Initiatives</p>
+                        </div>
+                         <!-- Item -->
+                         <div class="relative">
+                            <div class="absolute -left-[26px] md:-left-[38px] top-1 w-3 h-3 md:w-5 md:h-5 rounded-full bg-blue-600 border-2 md:border-4 border-white"></div>
+                            <span class="text-xs md:text-sm font-bold text-blue-600 uppercase">15:00 – 15:30</span>
+                            <h4 class="font-bold text-base md:text-xl text-gray-900 mt-1">Statement of Intent (SoI)</h4>
+                        </div>
+                         <!-- Item -->
+                         <div class="relative">
+                            <div class="absolute -left-[26px] md:-left-[38px] top-1 w-3 h-3 md:w-5 md:h-5 rounded-full bg-gray-800 border-2 md:border-4 border-white"></div>
+                            <span class="text-xs md:text-sm font-bold text-gray-600 uppercase">15:30 – 16:00</span>
+                            <h4 class="font-bold text-base md:text-xl text-gray-900 mt-1">Closing Ceremony</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Info -->
+                <div class="space-y-4 md:space-y-8">
+                    <!-- Nusantara Hospitality -->
+                    <div class="bg-orange-50 p-4 md:p-8 rounded-2xl md:rounded-3xl border border-orange-100">
+                        <div class="flex items-center gap-2 md:gap-3 mb-2 md:mb-4">
+                            <div class="w-8 h-8 md:w-12 md:h-12 bg-orange-200 rounded-lg md:rounded-xl flex items-center justify-center">
+                                <i class="fas fa-utensils text-base md:text-xl text-orange-700"></i>
+                            </div>
+                            <h4 class="font-bold text-lg md:text-2xl text-orange-900">Nusantara Hospitality</h4>
+                        </div>
+                        <p class="text-gray-700 text-sm md:text-lg leading-relaxed">Soft Power Diplomacy rooted in cultural exchange. Building trust through authentic Indonesian cultural experiences and cuisine, creating an environment where shared narratives establish mutual trust.</p>
+                    </div>
+
+                    <!-- Future Collaborative Framework -->
+                    <div class="bg-blue-50 p-4 md:p-8 rounded-2xl md:rounded-3xl border border-blue-100">
+                        <div class="flex items-center gap-2 md:gap-3 mb-2 md:mb-4">
+                            <div class="w-8 h-8 md:w-12 md:h-12 bg-blue-200 rounded-lg md:rounded-xl flex items-center justify-center">
+                                <i class="fas fa-handshake text-base md:text-xl text-blue-700"></i>
+                            </div>
+                            <h4 class="font-bold text-lg md:text-2xl text-blue-900">Future Collaborative Framework</h4>
+                        </div>
+                        <p class="text-gray-700 text-sm md:text-lg leading-relaxed">Statement of Intent (SoI) & Roadmap Initiation. Translating insights into concrete action for lasting partnership between Indonesian and Saudi youth communities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TARGET AUDIENCE SECTION -->
+        <section class="mb-16 md:mb-32">
+            <div class="bg-white rounded-2xl md:rounded-[2rem] shadow-xl p-4 md:p-10 lg:p-16 border border-gray-100">
+                <div class="text-center mb-8 md:mb-12">
+                    <span class="text-gray-500 font-bold tracking-widest text-xs md:text-sm uppercase mb-2 md:mb-3 block">VI. Participants</span>
+                    <h2 class="text-2xl md:text-4xl font-bold text-gray-900 font-serif">Target Audience</h2>
+                    <div class="w-16 md:w-24 h-2 bg-gold mx-auto mt-4 md:mt-6"></div>
+                </div>
+                
+                <div class="flex flex-col lg:flex-row gap-4 md:gap-6">
+                    <!-- Primary Section (75%) -->
+                    <div class="lg:w-3/4 bg-gradient-to-br from-saudiGreen to-green-800 p-4 md:p-10 rounded-2xl md:rounded-3xl text-white relative overflow-hidden">
+                        <!-- Decorative Elements -->
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -mr-20 -mt-20"></div>
+                        <div class="absolute bottom-0 left-0 w-40 h-40 bg-white opacity-5 rounded-full -ml-10 -mb-10"></div>
+                        
+                        <div class="relative z-10">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-4">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-14 h-14 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center text-white text-2xl sm:text-3xl flex-shrink-0">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs uppercase tracking-widest text-green-200 font-bold">Primary Audience</span>
+                                        <h4 class="font-bold text-xl sm:text-2xl text-white">International Youth Leaders</h4>
+                                    </div>
+                                </div>
+                                <div class="bg-white/20 backdrop-blur-sm px-4 py-2 sm:px-5 sm:py-3 rounded-xl text-center flex-shrink-0 self-start sm:self-auto">
+                                    <div class="text-2xl sm:text-3xl font-bold text-white">70<span class="text-base sm:text-lg">/100</span></div>
+                                    <div class="text-xs text-green-200 uppercase tracking-wider">Participants</div>
+                                </div>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6 mt-8">
+                                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <i class="fas fa-user-graduate text-gold text-xl"></i>
+                                        <span class="font-semibold text-lg">LOGIC Members</span>
+                                    </div>
+                                    <p class="text-green-100 text-sm">Active members of the LOGIC Initiative specializing in project management and volunteerism.</p>
+                                </div>
+                                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <i class="fas fa-university text-gold text-xl"></i>
+                                        <span class="font-semibold text-lg">University Students</span>
+                                    </div>
+                                    <p class="text-green-100 text-sm">Saudi university students passionate about youth leadership and social impact.</p>
+                                </div>
+                                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 md:col-span-2">
+                                    <div class="flex items-center gap-3 mb-3">
+                                        <i class="fas fa-globe text-gold text-xl"></i>
+                                        <span class="font-semibold text-lg">Foreign Students in Riyadh</span>
+                                    </div>
+                                    <p class="text-green-100 text-sm">International students based in Riyadh interested in cross-cultural collaboration and bilateral dialogue.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Secondary Section (25%) -->
+                    <div class="lg:w-1/4 flex flex-col gap-6">
+                        <div class="bg-gradient-to-br from-indoRed to-red-800 p-8 rounded-3xl text-white flex-1 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-20 h-20 bg-white opacity-5 rounded-full -mr-8 -mt-8"></div>
+                            <div class="relative z-10">
+                                <div class="flex items-center justify-between mb-4">
+                                    <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center text-white text-xl">
+                                        <i class="fas fa-user-tie"></i>
+                                    </div>
+                                    <div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg text-center">
+                                        <div class="text-2xl font-bold text-white">30<span class="text-sm">/100</span></div>
+                                    </div>
+                                </div>
+                                <span class="text-xs uppercase tracking-widest text-red-200 font-bold">Secondary</span>
+                                <h4 class="font-bold text-xl text-white mt-1 mb-4">Professionals & Diplomats</h4>
+                                <ul class="text-red-100 text-sm space-y-2">
+                                    <li class="flex items-center gap-2"><i class="fas fa-check text-xs"></i> Government Officials</li>
+                                    <li class="flex items-center gap-2"><i class="fas fa-check text-xs"></i> Diplomatic Corps</li>
+                                    <li class="flex items-center gap-2"><i class="fas fa-check text-xs"></i> Community Leaders</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-gold to-yellow-600 p-8 rounded-3xl text-gray-900 relative overflow-hidden">
+                            <div class="absolute -bottom-4 -right-4 text-6xl opacity-20">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <div class="relative z-10">
+                                <span class="text-xs uppercase tracking-widest text-yellow-900/70 font-bold">Total Capacity</span>
+                                <div class="flex items-end gap-2 mt-2">
+                                    <span class="text-4xl font-bold">100</span>
+                                    <span class="text-sm mb-1">participants</span>
+                                </div>
+                                <p class="text-yellow-900/80 text-xs mt-2">Curated for high-quality networking</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM SECTION -->
+        <section class="mb-32">
+             <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 font-serif">Project Management Team</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Advisory Board (Updated Layout) -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full">
+                    <h4 class="text-indoRed font-bold text-base uppercase mb-6 tracking-wider text-center">Advisory Board</h4>
+                    <div class="text-base text-gray-700 space-y-4 text-center">
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                            <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Ambassador of Indonesia to KSA</span>
+                            <strong class="text-gray-900 text-lg">Dr. Abdul Aziz Ahmad</strong>
+                        </div>
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                            <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Education & Culture Attaché</span>
+                            <strong class="text-gray-900 text-lg">Prof. Dr. H. M. Irfan Helmy</strong>
+                        </div>
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                            <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Researcher at KSU</span>
+                            <strong class="text-gray-900 text-lg">Arya Widyawan, Ph.D.</strong>
+                        </div>
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                            <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Chairperson Mandeh Haramain</span>
+                            <strong class="text-gray-900 text-lg">Dinita Masoedy, Ms.Sc</strong>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Steering Committee (Updated Layout) -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full">
+                    <h4 class="text-saudiGreen font-bold text-base uppercase mb-6 tracking-wider text-center">Steering Committee</h4>
+                    <div class="text-base text-gray-700 space-y-4 text-center">
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                            <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">President PPMI Saudi Arabia</span>
+                            <strong class="text-gray-900 text-lg">Dzulfiqar Rabbani</strong>
+                        </div>
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                            <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">President PPMI Riyadh</span>
+                            <strong class="text-gray-900 text-lg">Azca Avicienna</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Organizing Committee (Updated Layout) -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full">
+                    <h4 class="text-gold font-bold text-base uppercase mb-6 tracking-wider text-center">Organizing Committee</h4>
+                    <div class="text-base text-gray-700 space-y-4 text-center">
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                            <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Project Director</span> 
+                            <strong class="text-gray-900">Zaki Yamani</strong>
+                        </div>
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                            <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">General Secretary</span> 
+                            <strong class="text-gray-900">Fikri Gunawan</strong>
+                        </div>
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                            <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Treasury & Fundraising</span> 
+                            <strong class="text-gray-900">Raihan Azka</strong>
+                        </div>
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                            <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Program & Event</span> 
+                            <strong class="text-gray-900">Roihan Nurfauzi</strong>
+                        </div>
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                            <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Public Relations</span> 
+                            <strong class="text-gray-900">Galih Prakoso</strong>
+                        </div>
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                            <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Media & Communications</span> 
+                            <strong class="text-gray-900">Fara Aulia</strong>
+                        </div>
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                            <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Logistics & Operations</span> 
+                            <strong class="text-gray-900">Zufar Hammad</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BUDGET PLANNING (DETAILED) -->
+        <section class="mb-32 page-break">
+            <h2 class="text-4xl font-bold text-gray-900 mb-10 font-serif border-l-8 border-gold pl-6">IX. Budget Planning</h2>
+            
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 mb-12">
+                <table class="w-full text-left budget-table">
+                    <thead>
+                        <tr>
+                            <th class="w-1/3">Item / Description</th>
+                            <th class="w-1/3">Calculation / Unit</th>
+                            <th class="w-1/3 text-right">Total (SAR)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700">
+                        <!-- Consumption Section -->
+                        <tr class="bg-gray-100"><td colspan="3" class="font-bold text-gray-900 text-base uppercase tracking-wider py-4 px-6">1. Consumption (Food & Beverages)</td></tr>
+                        <tr><td class="pl-8 font-medium">Morning Snacks</td><td>110 people x 3 types (330 x 2.5)</td><td class="text-right">825</td></tr>
+                        <tr><td class="pl-8 font-medium">Heavy Meals</td><td>110 portions x 15 SAR</td><td class="text-right">1,650</td></tr>
+                        <tr><td class="pl-8 font-medium">Afternoon Snacks (Tentative)</td><td>110 people x 3 types</td><td class="text-right">825</td></tr>
+                        <tr><td class="pl-8 font-medium">Bottled Water</td><td>(5 glass @40) + (14 plastic @23)</td><td class="text-right">522</td></tr>
+                        <tr><td class="pl-8 font-medium">Fruits</td><td>Per Table</td><td class="text-right">250</td></tr>
+                        <tr><td class="pl-8 font-medium">Indonesian Specialty Drinks</td><td>-</td><td class="text-right">300</td></tr>
+                        <tr><td class="pl-8 font-medium">Gahwa & Karak Tea</td><td>-</td><td class="text-right">300</td></tr>
+                        <tr><td class="pl-8 font-medium">Consumption Supplies</td><td>-</td><td class="text-right">170</td></tr>
+                        <tr class="bg-gray-50 font-bold"><td colspan="2" class="pl-8 text-right">Subtotal Consumption</td><td class="text-right">4,842</td></tr>
+                        
+                        <!-- Secretariat Section -->
+                        <tr class="bg-gray-100"><td colspan="3" class="font-bold text-gray-900 text-base uppercase tracking-wider py-4 px-6">2. Secretariat & Supplies</td></tr>
+                        <tr><td class="pl-8 font-medium">Office Supplies</td><td>Paper, Printing, Pens</td><td class="text-right">250</td></tr>
+                        <tr><td class="pl-8 font-medium">Pens for Participants</td><td>110 pcs</td><td class="text-right">132</td></tr>
+                        <tr><td class="pl-8 font-medium">Notebooks</td><td>110 x 2 sheets</td><td class="text-right">12</td></tr>
+                        <tr><td class="pl-8 font-medium">Standard X-Banners</td><td>2 units x 100 SAR</td><td class="text-right">200</td></tr>
+                        <tr><td class="pl-8 font-medium">Name Tags</td><td>110 x 2.5 SAR</td><td class="text-right">275</td></tr>
+                        <tr><td class="pl-8 font-medium">Plaques</td><td>7 units x 100 SAR</td><td class="text-right">700</td></tr>
+                        <tr><td class="pl-8 font-medium">Guest Book Folders</td><td>2 units x 20 SAR</td><td class="text-right">40</td></tr>
+                        <tr><td class="pl-8 font-medium">Communication Costs</td><td>-</td><td class="text-right">100</td></tr>
+                        <tr><td class="pl-8 font-medium">Transportation</td><td>-</td><td class="text-right">200</td></tr>
+                        <tr><td class="pl-8 font-medium">VIP Souvenirs</td><td>12 people x 20 SAR</td><td class="text-right">240</td></tr>
+                        <tr><td class="pl-8 font-medium">General Souvenirs</td><td>98 people x 10 SAR</td><td class="text-right">980</td></tr>
+                         <tr><td class="pl-8 font-medium">Decoration</td><td>-</td><td class="text-right">150</td></tr>
+                         <tr class="bg-gray-50 font-bold"><td colspan="2" class="pl-8 text-right">Subtotal Secretariat</td><td class="text-right">3,279</td></tr>
+
+                        <!-- Miscellaneous Section - Only Contingency -->
+                        <tr class="bg-gray-100"><td colspan="3" class="font-bold text-gray-900 text-base uppercase tracking-wider py-4 px-6">3. Miscellaneous</td></tr>
+                        <tr><td class="pl-8 font-bold text-red-600">Contingency (15%)</td><td>-</td><td class="text-right text-red-600 font-bold">1,218</td></tr>
+                         <tr class="bg-gray-50 font-bold"><td colspan="2" class="pl-8 text-right">Subtotal Miscellaneous</td><td class="text-right">1,218</td></tr>
+                    </tbody>
+                    <tfoot class="bg-gray-900 text-white">
+                        <tr>
+                            <td colspan="2" class="p-6 font-bold text-2xl text-right">GRAND TOTAL</td>
+                            <td class="p-6 font-bold text-2xl text-right font-mono text-gold">9,339 SAR</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <!-- EXPECTED OUTPUTS & CLOSING -->
+        <section class="grid md:grid-cols-2 gap-10 mb-20">
+            <div class="bg-white p-10 rounded-3xl shadow-lg border-t-8 border-saudiGreen">
+                <h3 class="text-2xl font-bold mb-8 font-serif text-gray-900">X. Expected Outputs</h3>
+                <ul class="space-y-6 text-lg text-gray-700 list-gold-check">
+                    <li>
+                        <strong>Shared Networking & Rapport:</strong> Establishing a strong personal and professional connection between Indonesian students (PPMI Riyadh) and Saudi youth (LOGIC Initiative) as the foundational step for long-term collaboration.
+                    </li>
+                    <li>
+                        <strong>Introduction to Professional Standards:</strong> Providing participants with a practical overview of how social passion can be enhanced through professional management, learning from LOGIC's structured approach.
+                    </li>
+                    <li>
+                        <strong>Foundation for Future Action:</strong> Securing an initial agreement (Statement of Intent) to begin drafting a single, joint community initiative in Riyadh, marking the official start of the partnership between our two communities.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-gradient-hero p-10 rounded-3xl shadow-lg text-white flex flex-col justify-center relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-40 h-40 bg-white opacity-5 rounded-full -mr-12 -mt-12"></div>
+                
+                <h3 class="text-2xl font-bold mb-6 font-serif text-gold">XI. Closing</h3>
+                <p class="text-base text-gray-200 leading-loose mb-6 italic">
+                    "The Saudi–Indonesia Youth Strategic Dialogue is intended to be a starting point—a gateway to deeper mutual understanding. We believe that great collaborations always begin with meaningful conversations and the building of trust."
+                </p>
+                <p class="text-base text-gray-200 leading-loose mb-8 italic">
+                   "By uniting the spirit of service from Indonesian youth with the professional management of Saudi youth, we are laying the first stone for a shared future. This is more than a commemoration of National Education Day; it is a practical step toward preparing young leaders who are ready to work together for the progress of both nations, in harmony with the spirit of Saudi Vision 2030 and Indonesia Golden Vision 2045."
+                </p>
+                <div class="mt-auto pt-6 border-t border-white/10 flex justify-between items-end">
+                    <div class="text-sm text-gray-400">Riyadh, Feb 16, 2026</div>
+                    <div class="font-bold text-xl tracking-widest">PPMI RIYADH</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-gray-500 py-12 text-center text-sm no-print">
+        <!-- Organizers Logos in Footer -->
+        <div class="flex justify-center items-center gap-5 mb-4">
+            <img src="https://raw.githubusercontent.com/lvxferre9-wq/Saudi-Youth-meet/refs/heads/main/Logo%20PPMI.png" 
+                 alt="Logo PPMI Riyadh" 
+                 class="h-10 w-auto object-contain opacity-70">
+            <img src="https://raw.githubusercontent.com/lvxferre9-wq/Saudi-Youth-meet/refs/heads/main/Logo%20Logic.png" 
+                 alt="Logo LOGIC Initiative" 
+                 class="h-10 w-auto object-contain opacity-70">
+            <img src="https://raw.githubusercontent.com/lvxferre9-wq/Saudi-Youth-meet/refs/heads/main/logo%20Maha.png" 
+                 alt="Logo Mandeh Haramain" 
+                 class="h-10 w-auto object-contain opacity-70">
+            <img src="https://raw.githubusercontent.com/lvxferre9-wq/Saudi-Youth-meet/refs/heads/main/Logo%20Embassy.png" 
+                 alt="Logo Indonesian Embassy" 
+                 class="h-10 w-auto object-contain opacity-70">
+        </div>
+        <p>&copy; 2026 Indonesian Students Association in Riyadh. All Rights Reserved.</p>
+        
+        <!-- Contact Person -->
+        <div class="mt-6 pt-6 border-t border-gray-700">
+            <p class="text-xs text-gray-400 uppercase tracking-widest mb-2 font-bold">Contact Person</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 text-gray-300">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-user text-gold"></i>
+                    <span class="font-semibold">Azca Avicienna</span>
+                </div>
+                <span class="hidden sm:inline text-gray-600">|</span>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-phone text-gold"></i>
+                    <a href="tel:+966542379632" class="hover:text-gold transition-colors">+966 54 237 9632</a>
+                </div>
+                <span class="hidden sm:inline text-gray-600">|</span>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-envelope text-gold"></i>
+                    <a href="mailto:caviandy9@gmail.com" class="hover:text-gold transition-colors">caviandy9@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
