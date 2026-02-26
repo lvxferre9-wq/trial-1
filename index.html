@@ -113,6 +113,21 @@
             filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5));
         }
 
+        /* Fade In Animation */
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-in-up {
+            animation: fade-in-up 0.8s ease-out forwards;
+        }
+
         /* ===== RESPONSIVE STYLES ===== */
         
         /* Mobile Navigation */
@@ -378,19 +393,12 @@
         
         <!-- Background Map Image (Saudi Map by Gemini) -->
         <div class="absolute inset-0 z-0 flex justify-center items-center">
-            <!-- 
-                BLENDING DENGAN BACKGROUND GRADIENT:
-                - mix-blend-soft-light: Blend halus dengan warna background hijau gelap.
-                - opacity-60: Transparansi agar tidak terlalu dominan.
-                - brightness-90: Sedikit redup agar menyatu dengan background gelap.
-            -->
             <img src="https://github.com/lvxferre9-wq/Saudi-Youth-meet/blob/main/Saudi%20Map%20by%20Gemini.png?raw=true" 
                  alt="Saudi Arabia Map" 
                  class="w-full h-full object-cover object-center mix-blend-soft-light opacity-60 brightness-90">
         </div>
 
-        <!-- Decorative Blobs (Moved behind map or adjusted) -->
-        <!-- Lower opacity for blobs so they don't wash out the map -->
+        <!-- Decorative Blobs -->
         <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-green-900 rounded-full mix-blend-screen filter blur-3xl opacity-30 z-10 pointer-events-none"></div>
         <div class="absolute -top-20 -left-20 w-96 h-96 bg-red-900 rounded-full mix-blend-screen filter blur-3xl opacity-30 z-10 pointer-events-none"></div>
 
@@ -399,7 +407,7 @@
                 <span class="text-xs md:text-base tracking-[0.15em] md:tracking-[0.2em] uppercase text-gray-100 font-semibold">Official Project Proposal</span>
             </div>
             
-            <!-- Updated Title Structure (Preserved) -->
+            <!-- Updated Title Structure -->
             <h1 class="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-6 md:mb-8 leading-tight drop-shadow-lg">
                 Beyond Borders: Saudi–Indonesia <br class="hidden sm:block"> 
                 <span class="gold-text">Youth Meeting 2026</span>
@@ -471,7 +479,6 @@
         <!-- AIMS CARDS -->
         <section class="mb-16 md:mb-32 page-break">
             <div class="text-center mb-10 md:mb-20">
-                <!-- Updated Title (Preserved) -->
                 <h2 class="text-3xl md:text-5xl font-bold text-gray-900">Our Event Aims To</h2>
             </div>
             
@@ -634,7 +641,6 @@
             </div>
 
             <!-- Speakers Grid: 4 speakers horizontal on desktop, moderator below -->
-            <!-- 4 Speakers in a row -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6 md:mb-8">
                 <!-- Speaker 1: Nasser -->
                 <div class="bg-white rounded-2xl md:rounded-3xl shadow-lg overflow-hidden border border-gray-100 group hover:shadow-xl transition-shadow">
@@ -684,7 +690,7 @@
                     </div>
                 </div>
 
-                <!-- Speaker 4: To Be Confirmed (Previously Fayyiz) -->
+                <!-- Speaker 4: To Be Confirmed -->
                 <div class="bg-white rounded-2xl md:rounded-3xl shadow-lg overflow-hidden border border-gray-100 group hover:shadow-xl transition-shadow">
                     <div class="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center p-4 md:p-6">
                         <div class="w-[200px] h-[200px] md:w-full md:h-full rounded-full border-2 md:border-4 border-gray-300 shadow-lg mx-auto bg-gray-200 flex items-center justify-center">
@@ -719,7 +725,7 @@
             </div>
         </section>
 
-        <!-- SPEAKERS & MODERATOR SECTION - SESSION 2 -->
+        <!-- SPEAKERS SECTION - SESSION 2 (MODIFIED: 1 SPEAKER, NO MODERATOR) -->
         <section class="mb-16 md:mb-32">
             <div class="text-center mb-8 md:mb-12">
                 <span class="text-gray-500 font-bold tracking-widest text-xs md:text-sm uppercase mb-2 md:mb-3 block">IV. Session 2</span>
@@ -727,85 +733,90 @@
                 <p class="text-base md:text-xl italic text-gray-600 mt-2 md:mt-4 font-serif px-4"><span class="font-bold text-gray-900">From Solidarity to Strategy:</span> Project Management Frameworks for Cross-Border Youth Initiatives</p>
             </div>
 
-            <!-- Speakers Grid: 4 speakers horizontal on desktop, moderator below -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6 md:mb-8">
-                <!-- Speaker 1: TBC -->
-                <div class="bg-white rounded-2xl md:rounded-3xl shadow-lg overflow-hidden border border-gray-100 group hover:shadow-xl transition-shadow">
-                    <div class="aspect-square bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center p-4 md:p-6">
-                        <div class="w-[200px] h-[200px] md:w-full md:h-full rounded-full border-2 md:border-4 border-gray-300 shadow-lg mx-auto bg-gradient-to-br from-blue-200 to-blue-100 flex items-center justify-center">
-                            <div class="text-center">
-                                <i class="fas fa-user text-4xl md:text-6xl text-blue-400"></i>
-                                <p class="text-xs md:text-sm text-blue-500 mt-2 font-medium">Speaker TBC</p>
+            <!-- Single Speaker Hero Card - More Attractive Layout -->
+            <div class="max-w-4xl mx-auto">
+                <div class="relative overflow-hidden rounded-3xl md:rounded-[3rem] shadow-2xl">
+                    <!-- Background with gradient -->
+                    <div class="absolute inset-0" style="background: linear-gradient(135deg, #1e3a5f 0%, #0d1b2a 50%, #1b263b 100%);"></div>
+                    
+                    <!-- Decorative elements -->
+                    <div class="absolute top-0 right-0 w-64 h-64 rounded-full opacity-10" style="background: radial-gradient(circle, #D4AF37 0%, transparent 70%); transform: translate(30%, -30%);"></div>
+                    <div class="absolute bottom-0 left-0 w-48 h-48 rounded-full opacity-10" style="background: radial-gradient(circle, #155724 0%, transparent 70%); transform: translate(-30%, 30%);"></div>
+                    
+                    <!-- Decorative lines -->
+                    <div class="absolute top-0 left-0 right-0 h-1" style="background: linear-gradient(to right, transparent, #D4AF37, transparent);"></div>
+                    <div class="absolute bottom-0 left-0 right-0 h-1" style="background: linear-gradient(to right, transparent, #D4AF37, transparent);"></div>
+                    
+                    <!-- Content -->
+                    <div class="relative z-10 p-8 md:p-16 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                        <!-- Speaker Photo -->
+                        <div class="flex-shrink-0">
+                            <div class="relative">
+                                <!-- Glow effect behind photo -->
+                                <div class="absolute inset-0 rounded-full blur-2xl opacity-30" style="background: linear-gradient(135deg, #D4AF37, #155724);"></div>
+                                
+                                <!-- Photo container -->
+                                <div class="relative w-48 h-48 md:w-64 md:h-64 rounded-full border-4 overflow-hidden shadow-2xl" style="border-color: #D4AF37;">
+                                    <div class="w-full h-full flex items-center justify-center" style="background: linear-gradient(135deg, #374151 0%, #1f2937 100%);">
+                                        <div class="text-center">
+                                            <i class="fas fa-user text-5xl md:text-7xl text-gray-400 mb-2"></i>
+                                            <p class="text-xs md:text-sm text-gray-400 font-medium">Speaker TBC</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Badge -->
+                                <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                                    <div class="px-4 py-2 rounded-full shadow-lg text-sm font-bold text-black" style="background-color: #D4AF37;">
+                                        <i class="fas fa-microphone mr-2"></i>Keynote Speaker
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Speaker Info -->
+                        <div class="text-center md:text-left flex-1">
+                            <div class="inline-block px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4" style="background-color: rgba(212, 175, 55, 0.2); color: #D4AF37;">
+                                Featured Speaker
+                            </div>
+                            
+                            <h3 class="text-2xl md:text-4xl font-bold text-white mb-4 font-serif">
+                                To Be Confirmed
+                            </h3>
+                            
+                            <div class="w-20 h-1 mx-auto md:mx-0 mb-4" style="background-color: #D4AF37;"></div>
+                            
+                            <p class="text-gray-300 text-lg md:text-xl mb-6 leading-relaxed">
+                                Distinguished expert in cultural diplomacy and youth leadership development. Details to be announced.
+                            </p>
+                            
+                            <div class="flex flex-wrap justify-center md:justify-start gap-3">
+                                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm">
+                                    <i class="fas fa-globe text-amber-400"></i>
+                                    <span class="text-white text-sm">Cross-Border Expertise</span>
+                                </div>
+                                <div class="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm">
+                                    <i class="fas fa-users text-green-400"></i>
+                                    <span class="text-white text-sm">Youth Development</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="p-4 md:p-6 text-center">
-                        <p class="font-bold text-base md:text-xl text-gray-400 italic">To Be Confirmed</p>
-                        <p class="text-xs md:text-sm text-gray-400 mt-1 md:mt-2 italic">Speaker details pending</p>
-                    </div>
-                </div>
-
-                <!-- Speaker 2: TBC -->
-                <div class="bg-white rounded-2xl md:rounded-3xl shadow-lg overflow-hidden border border-gray-100 group hover:shadow-xl transition-shadow">
-                    <div class="aspect-square bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center p-4 md:p-6">
-                        <div class="w-[200px] h-[200px] md:w-full md:h-full rounded-full border-2 md:border-4 border-gray-300 shadow-lg mx-auto bg-gradient-to-br from-green-200 to-green-100 flex items-center justify-center">
-                            <div class="text-center">
-                                <i class="fas fa-user text-4xl md:text-6xl text-green-400"></i>
-                                <p class="text-xs md:text-sm text-green-500 mt-2 font-medium">Speaker TBC</p>
-                            </div>
+                    
+                    <!-- Session Info Footer -->
+                    <div class="relative z-10 border-t border-white/10 px-8 md:px-16 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+                        <div class="flex items-center gap-3 text-gray-300">
+                            <i class="far fa-clock text-amber-400"></i>
+                            <span>13:15 – 15:00</span>
                         </div>
-                    </div>
-                    <div class="p-4 md:p-6 text-center">
-                        <p class="font-bold text-base md:text-xl text-gray-400 italic">To Be Confirmed</p>
-                        <p class="text-xs md:text-sm text-gray-400 mt-1 md:mt-2 italic">Speaker details pending</p>
-                    </div>
-                </div>
-
-                <!-- Speaker 3: TBC -->
-                <div class="bg-white rounded-2xl md:rounded-3xl shadow-lg overflow-hidden border border-gray-100 group hover:shadow-xl transition-shadow">
-                    <div class="aspect-square bg-gradient-to-br from-yellow-100 to-yellow-50 flex items-center justify-center p-4 md:p-6">
-                        <div class="w-[200px] h-[200px] md:w-full md:h-full rounded-full border-2 md:border-4 border-gray-300 shadow-lg mx-auto bg-gradient-to-br from-yellow-200 to-yellow-100 flex items-center justify-center">
-                            <div class="text-center">
-                                <i class="fas fa-user text-4xl md:text-6xl text-yellow-500"></i>
-                                <p class="text-xs md:text-sm text-yellow-600 mt-2 font-medium">Speaker TBC</p>
-                            </div>
+                        <div class="flex items-center gap-3 text-gray-300">
+                            <i class="fas fa-chalkboard-teacher text-green-400"></i>
+                            <span>Executive Seminar Format</span>
                         </div>
-                    </div>
-                    <div class="p-4 md:p-6 text-center">
-                        <p class="font-bold text-base md:text-xl text-gray-400 italic">To Be Confirmed</p>
-                        <p class="text-xs md:text-sm text-gray-400 mt-1 md:mt-2 italic">Speaker details pending</p>
-                    </div>
-                </div>
-
-                <!-- Speaker 4: TBC -->
-                <div class="bg-white rounded-2xl md:rounded-3xl shadow-lg overflow-hidden border border-gray-100 group hover:shadow-xl transition-shadow">
-                    <div class="aspect-square bg-gradient-to-br from-purple-100 to-purple-50 flex items-center justify-center p-4 md:p-6">
-                        <div class="w-[200px] h-[200px] md:w-full md:h-full rounded-full border-2 md:border-4 border-gray-300 shadow-lg mx-auto bg-gradient-to-br from-purple-200 to-purple-100 flex items-center justify-center">
-                            <div class="text-center">
-                                <i class="fas fa-user text-4xl md:text-6xl text-purple-400"></i>
-                                <p class="text-xs md:text-sm text-purple-500 mt-2 font-medium">Speaker TBC</p>
-                            </div>
+                        <div class="flex items-center gap-3 text-gray-300">
+                            <i class="fas fa-comments text-blue-400"></i>
+                            <span>Interactive Discussion</span>
                         </div>
-                    </div>
-                    <div class="p-4 md:p-6 text-center">
-                        <p class="font-bold text-base md:text-xl text-gray-400 italic">To Be Confirmed</p>
-                        <p class="text-xs md:text-sm text-gray-400 mt-1 md:mt-2 italic">Speaker details pending</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Moderator Section Below Speakers - Session 2 -->
-            <div class="max-w-xl mx-auto">
-                <div class="w-full bg-gradient-to-r from-gray-100 via-white to-gray-100 rounded-2xl md:rounded-3xl p-6 md:p-10 border border-gray-200 md:border-2 shadow-lg flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-8">
-                    <div class="h-32 w-32 md:h-36 md:w-36 rounded-full border-2 md:border-4 border-gray-300 shadow-lg flex-shrink-0 bg-gradient-to-br from-gray-200 to-gray-100 flex items-center justify-center">
-                        <div class="text-center">
-                            <i class="fas fa-user text-2xl md:text-3xl text-gray-400"></i>
-                        </div>
-                    </div>
-                    <div class="text-center sm:text-left">
-                        <span class="text-xs md:text-sm uppercase tracking-widest text-gray-500 font-bold">Moderator</span>
-                        <p class="font-bold text-xl md:text-2xl text-gray-400 italic">To Be Confirmed</p>
-                        <p class="text-sm md:text-base text-gray-400 mt-1 md:mt-2 italic">Moderator details pending</p>
                     </div>
                 </div>
             </div>
@@ -1008,74 +1019,73 @@
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Advisory Board (Updated Layout) -->
+                <!-- Advisory Board -->
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full">
                     <h4 class="text-indoRed font-bold text-base uppercase mb-6 tracking-wider text-center">Advisory Board</h4>
                     <div class="text-base text-gray-700 space-y-4 text-center">
-                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1">
                             <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Ambassador of Indonesia to KSA</span>
                             <strong class="text-gray-900 text-lg">Dr. Abdul Aziz Ahmad</strong>
                         </div>
-                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1">
                             <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Education & Culture Attaché</span>
                             <strong class="text-gray-900 text-lg">Prof. Dr. H. M. Irfan Helmy</strong>
                         </div>
-                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1">
                             <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Researcher at KSU</span>
                             <strong class="text-gray-900 text-lg">Arya Widyawan, Ph.D.</strong>
                         </div>
-                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1">
                             <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Chairperson Mandeh Haramain</span>
                             <strong class="text-gray-900 text-lg">Dinita Masoedy, Ms.Sc</strong>
                         </div>
-
                     </div>
                 </div>
 
-                <!-- Steering Committee (Updated Layout) -->
+                <!-- Steering Committee -->
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full">
                     <h4 class="text-saudiGreen font-bold text-base uppercase mb-6 tracking-wider text-center">Steering Committee</h4>
                     <div class="text-base text-gray-700 space-y-4 text-center">
-                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1">
                             <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">President PPMI Saudi Arabia</span>
                             <strong class="text-gray-900 text-lg">Dzulfiqar Rabbani</strong>
                         </div>
-                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1">
                             <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">President PPMI Riyadh</span>
                             <strong class="text-gray-900 text-lg">Azca Avicienna</strong>
                         </div>
                     </div>
                 </div>
 
-                <!-- Organizing Committee (Updated Layout) -->
+                <!-- Organizing Committee -->
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col h-full">
                     <h4 class="text-gold font-bold text-base uppercase mb-6 tracking-wider text-center">Organizing Committee</h4>
                     <div class="text-base text-gray-700 space-y-4 text-center">
-                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1">
                             <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Project Director</span> 
                             <strong class="text-gray-900">Zaki Yamani</strong>
                         </div>
-                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1">
                             <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">General Secretary</span> 
                             <strong class="text-gray-900">Fikri Gunawan</strong>
                         </div>
-                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1">
                             <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Treasury & Fundraising</span> 
                             <strong class="text-gray-900">Raihan Azka</strong>
                         </div>
-                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1">
                             <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Program & Event</span> 
                             <strong class="text-gray-900">Roihan Nurfauzi</strong>
                         </div>
-                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1">
                             <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Public Relations</span> 
                             <strong class="text-gray-900">Galih Prakoso</strong>
                         </div>
-                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1">
                             <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Media & Communications</span> 
                             <strong class="text-gray-900">Fara Aulia</strong>
                         </div>
-                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1 last:border-0 last:pb-0 last:mb-0">
+                        <div class="flex flex-col border-b border-gray-100 pb-3 mb-1">
                             <span class="text-xs text-gray-400 uppercase font-bold tracking-widest mb-1">Logistics & Operations</span> 
                             <strong class="text-gray-900">Zufar Hammad</strong>
                         </div>
@@ -1126,7 +1136,7 @@
                          <tr><td class="pl-8 font-medium">Decoration</td><td>-</td><td class="text-right">150</td></tr>
                          <tr class="bg-gray-50 font-bold"><td colspan="2" class="pl-8 text-right">Subtotal Secretariat</td><td class="text-right">3,279</td></tr>
 
-                        <!-- Miscellaneous Section - Only Contingency -->
+                        <!-- Miscellaneous Section -->
                         <tr class="bg-gray-100"><td colspan="3" class="font-bold text-gray-900 text-base uppercase tracking-wider py-4 px-6">3. Miscellaneous</td></tr>
                         <tr><td class="pl-8 font-bold text-red-600">Contingency (15%)</td><td>-</td><td class="text-right text-red-600 font-bold">1,218</td></tr>
                          <tr class="bg-gray-50 font-bold"><td colspan="2" class="pl-8 text-right">Subtotal Miscellaneous</td><td class="text-right">1,218</td></tr>
